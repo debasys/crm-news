@@ -1,0 +1,27 @@
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/newest/index">CRM News</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/newest/index">New</a></li>
+          <li><a href="#">Comments</a></li>
+          <li><a href="#">Ask</a></li>
+          <li><a href="#">Jobs</a></li>
+          <li><a href="#">Submit</a></li>
+        </ul> 
+        <ul class="nav navbar-nav navbar-right">
+          <li><% if session[:user_name].blank? %><a href="/auth/facebook" style="height: 50px; padding-top: 0px;"><img src="/assets/fb-login.png" /></a><% else  %><%= session[:user_name] %><br/><div class="logout"><a href="/logout">Logout</a></div><% end  %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
